@@ -4,6 +4,8 @@ const hbs = require('hbs');
 
 require('./hbs/helpers');
 
+const port = process.env.PORT || 3000;
+
 app.use(express.static(__dirname + '/public'));
 
 //Express hbs
@@ -25,6 +27,6 @@ app.get('/about', (req, res) => {
 
 });
 
-app.listen(8080, () => {
-    console.log('Escuchando peticiones en el puerto 8080');
+app.listen(port, () => {
+    console.log(`Escuchando peticiones en el puerto ${port}`);
 });
