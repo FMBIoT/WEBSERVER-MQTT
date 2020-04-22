@@ -36,7 +36,6 @@ http://localhost:3000/
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Node](https://nodejs.org/en/docs/) - El entorno de programación usado
 * [Handlebars](https://handlebarsjs.com/) - El template engine usado
