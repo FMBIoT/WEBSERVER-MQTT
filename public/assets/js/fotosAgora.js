@@ -1,47 +1,20 @@
-// ============================
-// GET FOTOS DE BACKEND
-// ============================
+/* 
+============================
+    GET FOTOS AGORA
+============================
 
-
-//Petición a nuestro localhost para obtención de imágenes cada cierto intervalo de tiempo.
-let primeraVez = true;
+DESCRIPCION:
+    Petición a nuestro localhost para obtención de imágenes cada cierto intervalo de tiempo.
+*/
 
 setInterval(() => {
-
-    ajaxGet("/agoraFoto", function(respuesta) {
-
-            let imgJSON = JSON.parse(respuesta);
-
-            if (primeraVez == true) {
-
-                let imgElt = document.createElement("img");
-
-                imgElt.className = 'img-thumbnail';
-
-                imgElt.src = imgJSON.url;
-
-                document.getElementById("imagenes").appendChild(imgElt);
-
-                primeraVez = false;
-
-                oldChild = imgElt;
-
-            } else {
-
-                let imgElt = document.createElement("img");
-
-                imgElt.className = 'img-thumbnail';
-
-                imgElt.src = imgJSON.url;
-
-                document.getElementById("imagenes").replaceChild(imgElt, oldChild);
-
-                oldChild = imgElt;
-
-            }
-
+    $.ajax({
+        url: '/agoraFoto',
+        success: function(respuesta) {
+            miImagen(respuesta);
+        },
+        error: function() {
+            console.log("No se ha podido obtener la información");
         }
-
-    );
-
-}, 3000);
+    });
+}, 6000);

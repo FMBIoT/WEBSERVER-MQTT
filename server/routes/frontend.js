@@ -1,6 +1,11 @@
-// ==========================
-//         FRONT-END
-// ==========================
+/* ==========================
+         FRONT-END
+   ==========================
+
+   DESCRIPCION:
+   Se trata del archivo js encargado de renderizar las diferentes paginas que se alojan en nuestro servidor web
+   
+*/
 
 
 const express = require('express');

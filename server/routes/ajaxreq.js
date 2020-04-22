@@ -1,6 +1,13 @@
-// ==========================
-//      PETICIONES AJAX
-// ==========================
+/* 
+==========================
+    PETICIONES AJAX
+==========================
+ 
+ DESCRIPCION:
+  Peticiones desde el frontend al backend para llevar a cabo el proceso 
+  de refrescar la imagen cada cierto tiempo predeterminado.
+
+  */
 
 
 const express = require('express');
@@ -8,6 +15,8 @@ const app = express();
 const fs = require('fs');
 
 // GET IMÁGENES ETSIT
+// Si existe la imagen se envia un json con la url versionada para evitar el caché, si no existe se envia la imagen de notFound.
+
 app.get('/etsitFoto', (req, res) => {
 
 
@@ -41,6 +50,9 @@ app.get('/etsitFoto', (req, res) => {
 
 });
 
+
+// GET IMÁGENES CASA DEL ALUMNO
+
 app.get('/casaAlumFoto', (req, res) => {
 
 
@@ -73,6 +85,8 @@ app.get('/casaAlumFoto', (req, res) => {
 
 });
 
+// GET IMÁGENES AGORA
+
 app.get('/agoraFoto', (req, res) => {
 
     fs.stat('./public/assets/img/agora.jpg', function(err) {
@@ -82,7 +96,7 @@ app.get('/agoraFoto', (req, res) => {
 
                 {
 
-                    url: './assets/img/agora.jpg'
+                    url: './assets/img/agora.jpg' + (new Date()).getTime()
 
                 }
 
@@ -105,6 +119,6 @@ app.get('/agoraFoto', (req, res) => {
 });
 
 
-
+//Exportar modulo app
 
 module.exports = app;

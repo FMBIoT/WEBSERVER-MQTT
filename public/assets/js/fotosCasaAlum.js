@@ -1,48 +1,22 @@
-// ============================
-// GET FOTOS DE BACKEND
-// ============================
+/* 
+===============================
+    GET FOTOS CASA DEL ALUMNO
+===============================
+
+DESCRIPCION:
+    Petición a nuestro localhost para obtención de imágenes cada cierto intervalo de tiempo.
+*/
 
 
-
-//Petición a nuestro localhost para obtención de imágenes cada cierto intervalo de tiempo.
-let primeraVez = true;
 
 setInterval(() => {
-
-    ajaxGet("/casaAlumFoto", function(respuesta) {
-
-            let imgJSON = JSON.parse(respuesta);
-
-            if (primeraVez == true) {
-
-                let imgElt = document.createElement("img");
-
-                imgElt.className = 'img-thumbnail';
-
-                imgElt.src = imgJSON.url;
-
-                document.getElementById("imagenes").appendChild(imgElt);
-
-                primeraVez = false;
-
-                oldChild = imgElt;
-
-            } else {
-
-                let imgElt = document.createElement("img");
-
-                imgElt.className = 'img-thumbnail';
-
-                imgElt.src = imgJSON.url;
-
-                document.getElementById("imagenes").replaceChild(imgElt, oldChild);
-
-                oldChild = imgElt;
-
-            }
-
+    $.ajax({
+        url: '/casaAlumFoto',
+        success: function(respuesta) {
+            miImagen(respuesta);
+        },
+        error: function() {
+            console.log("No se ha podido obtener la información");
         }
-
-    );
-
-}, 3000);
+    });
+}, 6000);
