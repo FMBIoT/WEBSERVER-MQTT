@@ -1,4 +1,4 @@
-# SERVIDOR WEB-MQTT
+# SERVIDOR WEB-MQTT(NODE)
 
 Este proyecto fin de grado se trata en un servidor web encargado de la recepción y visualización de las imágenes obtenidas mediante el protocolo MQTT. Los mensajes recibidos por el cliente MQTT.js se tratan de las imágenes obtenidas por medio de varios ESP32 equipados con una cámara y conectados a un broker mediante TLS.
 ## Comenzando 🚀
@@ -48,7 +48,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * **Francisco Mahedero Biot** - *Trabajo Fin de grado* - [FMBIoT](https://github.com/FMBIoT)
 
 
-## Expresiones de Gratitud 🎁
+## Agradecimientos 🎁
 
 * Gracias a todas las personas que me han ayudado para finalizar este trabajo❤️
 
