@@ -13,7 +13,7 @@ const mqtt = require('mqtt');
 
 const fs = require('fs');
 
-let caFile = fs.readFileSync("C:/Users/Francisco/Desktop/TFG/WEBSERVER-MQTT/mqtt/ca.crt");
+let caFile = fs.readFileSync("C:/Users/Francisco/Desktop/TFG/webserverTFG/mqtt/ca.crt");
 
 let topic_list = ["ETSIT", "casaAlumno", "agora"];
 
