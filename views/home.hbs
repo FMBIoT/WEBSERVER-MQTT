@@ -1,0 +1,58 @@
+{{> head}}
+
+
+    {{> navbar}}
+
+ {{!-- Imagen TG --}}
+
+  <div class="row justify-content-lg-center animated fadeIn fast">
+
+      <img src="assets/img/logo2.jpg" class="img-fluid "alt="Responsive image">
+
+  </div>
+
+  <div class="container text-center mb-5 animated fadeIn fast" style="font-size: large;">
+      <h3> ¿DE QUE TRATA?</h3>
+      <hr>
+      <p>El objetivo del trabajo es realizar una aplicación IoT que, utilizando varios ESP32 equipados con una cámara y ubicados en distintas localizaciones, permita supervisar un entono, como por ejemplo un campus, edificio, etc. Las imágenes son transmitidas mediante el protocolo MQTT de forma segura. El acceso a la información se realiza por medio de un servicio web.</p>  
+  </div>
+  
+
+{{!-- CARDS BOOTSTRAP --}}
+
+<div class="container p-5">
+
+<div class="card-deck">
+    
+    <div class="card  border-primary mb-5  animated fadeIn">
+      <img class="card-img-top" src="assets/img/etsit_fondo.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">ETSIT</h5>
+          <p class="card-text">Imágenes a tiempo real de el edificio de la ETSIT</p>
+          <a href="/Etsit" class="btn btn-outline-primary "> Ver más ...</a>
+        </div>
+    </div>
+    
+    <div class="card mb-5 border-primary  animated fadeIn">
+      <img class="card-img-top" src="assets/img/casaAlumno_fondo.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">CASA DEL ALUMNO</h5>
+          <p class="card-text">Imágenes a tiempo real de el edificio de la Casa del alumno</p>
+          <a href="/casaAlum" class="btn btn-outline-primary "> Ver más ...</a>
+        </div>
+    </div>
+
+    <div class="card mb-5 border-primary animated fadeIn">
+      <img class="card-img-top" src="assets/img/agora_fondo.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">AGORA</h5>
+        <p class="card-text">Imágenes a tiempo real de el edificio del Agora</p>
+        <a href="/Agora" class="btn btn-outline-primary "> Ver más ...</a>
+      </div>
+    </div>
+
+</div>
+
+</div>
+ 
+   {{> footer}}
