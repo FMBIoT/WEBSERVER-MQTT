@@ -47,7 +47,7 @@ http://localhost:3000/
 * **Francisco Mahedero Biot** - *Trabajo Fin de grado* - [FMBIoT](https://github.com/FMBIoT)
 
 
-## Agradecimientos 🎁
+<!-- ## Agradecimientos 🎁
 
-* Gracias a todas las personas que me han ayudado para finalizar este trabajo❤️
+* Gracias a todas las personas que me han ayudado para finalizar este trabajo❤️ -->
 
