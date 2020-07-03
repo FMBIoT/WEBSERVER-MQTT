@@ -96,7 +96,7 @@ app.get('/agoraFoto', (req, res) => {
 
                 {
 
-                    url: './assets/img/agora.jpg' + (new Date()).getTime()
+                    url: './assets/img/agora.jpg?' + (new Date()).getTime()
 
                 }
 
