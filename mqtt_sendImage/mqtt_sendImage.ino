@@ -115,6 +115,8 @@ void reconnect() {
 }
 
 void setup() {
+  Serial.begin(115200);
+  Serial.setTimeout(500);
   init_wifi();
   espClient.setCACert(ca_cert);
   client.setServer(mqtt_server, 8883);
